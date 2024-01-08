@@ -73,7 +73,10 @@ export const saveProduct = async (req: RequestWithToken, res: Response) => {
 	const newProduct = validateNewProduct(req.body);
 
 	const reqFile = req.file as Express.Multer.File;
-	const imageURL = await uploadImage(reqFile, "products");
+	const imageURL = "";
+	if (reqFile) {
+		await uploadImage(reqFile, "products");
+	}
 
 	if (newProduct) {
 		const savedProduct = await prisma.product.create({
