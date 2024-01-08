@@ -13,15 +13,17 @@
 
 		/* Type Checking */
 		"strict": true /* Enable all strict type-checking options. */,
-		"noImplicitThis": false /* Enable error reporting when 'this' is given the type 'any'. */,
+		"noImplicitThis": true /* Enable error reporting when 'this' is given the type 'any'. */,
 		"noUnusedLocals": true /* Enable error reporting when local variables aren't read. */,
 		"noUnusedParameters": true /* Raise an error when a function parameter isn't read. */,
 
 		"noFallthroughCasesInSwitch": true /* Enable error reporting for fallthrough cases in switch statements. */,
+		"noImplicitAny": false,
 
 		/* Completeness */
 		// "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
 		"skipLibCheck": true /* Skip type checking all .d.ts files. */,
-		"outDir": "./build/"
+		"outDir": "./build/",
+		"typeRoots": ["./typings", "./node_modules/@types/"]
 	}
 }
