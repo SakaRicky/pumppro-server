@@ -13,7 +13,7 @@
 
 		/* Type Checking */
 		"strict": true /* Enable all strict type-checking options. */,
-		"noImplicitThis": true /* Enable error reporting when 'this' is given the type 'any'. */,
+		"noImplicitThis": false /* Enable error reporting when 'this' is given the type 'any'. */,
 		"noUnusedLocals": true /* Enable error reporting when local variables aren't read. */,
 		"noUnusedParameters": true /* Raise an error when a function parameter isn't read. */,
 
