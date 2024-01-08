@@ -56,18 +56,18 @@ app.use(setHeaders);
 
 app.use(requestLogger);
 
-app.use("/api/auth", authRouter);
+app.use("/auth", authRouter);
 app.use(tokenExtractor);
 app.use(checkTokenExistence);
-app.use("/api/users", usersRoute);
-app.use("/api/products", productsRoutes);
-app.use("/api/categories", categoriesRoutes);
-app.use("/api/sales", salesRoutes);
-app.use("/api/salessummary", salesSummaryRoutes);
-app.use("/api/daily-sales", dailySalesRoutes);
-app.use("/api/fuel", fuelsRoutes);
-app.use("/api/tank", tankRoutes);
-app.use("/api/messages", messageNotificationsRoutes);
+app.use("/users", usersRoute);
+app.use("/products", productsRoutes);
+app.use("/categories", categoriesRoutes);
+app.use("/sales", salesRoutes);
+app.use("/salessummary", salesSummaryRoutes);
+app.use("/daily-sales", dailySalesRoutes);
+app.use("/fuel", fuelsRoutes);
+app.use("/tank", tankRoutes);
+app.use("/messages", messageNotificationsRoutes);
 
 app.use("/", (_req, res) => {
 	res.send("Server Deployed");
