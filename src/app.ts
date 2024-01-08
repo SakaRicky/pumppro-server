@@ -67,9 +67,9 @@ app.use("/api/fuel", fuelsRoutes);
 app.use("/api/tank", tankRoutes);
 app.use("/api/messages", messageNotificationsRoutes);
 
-// app.use("*", (_req, res) =>
-// 	res.sendFile(path.join(__dirname, "..", "dist", "index.html"))
-// );
+app.use("/", (_req, res) => {
+	res.send("Server Deployed");
+});
 
 app.use(unknownEndpoint);
 app.use(errorHandler);
