@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 import express from "express";
 import session from "express-session";
 import cors from "cors";
@@ -36,6 +37,7 @@ const corsOptions = {
 	credentials: true,
 	optionSuccessStatus: 200
 };
+// eslint-disable-next-line @typescript-eslint/no-unsafe-call
 app.use(cors(corsOptions));
 
 app.use(express.json());
