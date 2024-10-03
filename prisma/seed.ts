@@ -27,7 +27,6 @@ async function seed() {
 	await prisma.fuel.deleteMany();
 	await prisma.tank.deleteMany();
 	await prisma.productCategory.deleteMany();
-	
 	await prisma.messageNotification.deleteMany();
 
 	// CREATING USERS
