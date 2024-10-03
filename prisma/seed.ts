@@ -20,13 +20,14 @@ const productCategories = [
 async function seed() {
 	await prisma.sale.deleteMany();
 	await prisma.saleDetail.deleteMany();
+	await prisma.purchase.deleteMany();
 	await prisma.product.deleteMany();
 	await prisma.user.deleteMany();
 	await prisma.dailySale.deleteMany();
 	await prisma.fuel.deleteMany();
 	await prisma.tank.deleteMany();
 	await prisma.productCategory.deleteMany();
-	await prisma.purchase.deleteMany();
+	
 	await prisma.messageNotification.deleteMany();
 
 	// CREATING USERS

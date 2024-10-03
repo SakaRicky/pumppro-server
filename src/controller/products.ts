@@ -73,9 +73,9 @@ export const saveProduct = async (req: RequestWithToken, res: Response) => {
 	const newProduct = validateNewProduct(req.body);
 
 	const reqFile = req.file as Express.Multer.File;
-	const imageURL = "";
+	let imageURL = "";
 	if (reqFile) {
-		await uploadImage(reqFile, "products");
+		imageURL = await uploadImage(reqFile, "products");
 	}
 
 	if (newProduct) {
